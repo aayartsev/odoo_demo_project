@@ -1,0 +1,22 @@
+<odoo>
+    <menuitem
+        id="first_model_menu_root"
+        name="First Model Root"
+        web_icon="first_module,static/description/icon.svg"
+        active="True"
+        sequence="100"
+    >
+        <menuitem
+            id="first_model_menu_submenu"
+            name="First Model Submenu"
+            sequence="10"
+        >
+            <menuitem
+                id="first_model_menu"
+                action="first_module.first_model_act_window_action"
+                groups="base.group_user"
+                sequence="10"
+            />
+        </menuitem>
+    </menuitem>
+</odoo>

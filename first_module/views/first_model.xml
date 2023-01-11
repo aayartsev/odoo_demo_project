@@ -1,0 +1,75 @@
+<odoo>
+    <record id="first_model_tree_view" model="ir.ui.view">
+        <field name="name">first.model.tree</field>
+        <field name="model">first.model</field>
+        <field name="arch" type="xml">
+            <tree string="First Model Records">
+                <field name="name" />
+                <field name="field_one" />
+                <field name="field_two" />
+                <field name="result_field" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="first_model_form_view" model="ir.ui.view">
+        <field name="name">first.model.form</field>
+        <field name="model">first.model</field>
+        <field name="arch" type="xml">
+            <form string="First Model Form" class="o_sale_order">
+                <header>
+                    <button
+                        string="Start Function"
+                        class="btn-primary"
+                        name="start_function"
+                        type="object"
+                        data-hotkey="shift+g"
+                    />
+                </header>
+                <sheet>
+                    <group name="first_model_data">
+                        <field name="name" />
+                        <field name="field_one" />
+                        <field name="field_two" />
+                        <field name="result_field" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="first_model_search_view" model="ir.ui.view">
+        <field name="name">first.model.search</field>
+        <field name="model">first.model</field>
+        <field name="priority" eval="15" />
+        <field name="arch" type="xml">
+            <search string="Search First Model Records">
+                <field
+                    name="name"
+                    string="By name"
+                    filter_domain="[('name', 'ilike', self)"
+                />
+                <filter
+                    string="My records"
+                    domain="[('create_uid', '=', uid)]"
+                    name="my_first_model_records"
+                />
+            </search>
+        </field>
+    </record>
+
+    <record id="first_model_act_window_action" model="ir.actions.act_window">
+        <field name="name">First Model Window Action</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">first.model</field>
+        <field name="view_id" ref="first_module.first_model_tree_view" />
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="first_model_search_view" />
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create records in your First Model
+            </p>
+            <p>Viola!!!</p>
+        </field>
+    </record>
+</odoo>

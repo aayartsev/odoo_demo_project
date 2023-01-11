@@ -1,0 +1,159 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* first_module
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-11 16:57+0000\n"
+"PO-Revision-Date: 2023-01-11 16:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: first_module
+#: model_terms:ir.ui.view,arch_db:first_module.first_model_search_view
+msgid "By name"
+msgstr "По имени"
+
+#. module: first_module
+#: model_terms:ir.actions.act_window,help:first_module.first_model_act_window_action
+msgid "Create records in your First Model"
+msgstr "Создайте записи в вашей Первой Модели"
+
+#. module: first_module
+#: model:ir.model.fields,field_description:first_module.field_first_model__create_uid
+msgid "Created by"
+msgstr "Создал"
+
+#. module: first_module
+#: model:ir.model.fields,field_description:first_module.field_first_model__create_date
+msgid "Created on"
+msgstr "Создано"
+
+#. module: first_module
+#: model:ir.model.fields,field_description:first_module.field_first_model__display_name
+msgid "Display Name"
+msgstr "Отображаемое имя"
+
+#. module: first_module
+#: model:ir.model.fields,field_description:first_module.field_first_model__field_one
+msgid "Field One"
+msgstr "Поле Один"
+
+#. module: first_module
+#: model:ir.model.fields,field_description:first_module.field_first_model__field_two
+msgid "Field Two"
+msgstr "Поле Два"
+
+#. module: first_module
+#: model_terms:ir.ui.view,arch_db:first_module.first_model_form_view
+msgid "First Model Form"
+msgstr "Форма Первой Модели"
+
+#. module: first_module
+#: model_terms:ir.ui.view,arch_db:first_module.first_model_tree_view
+msgid "First Model Records"
+msgstr "Записи Первой Модели"
+
+#. module: first_module
+#: model:ir.ui.menu,name:first_module.first_model_menu_root
+msgid "First Model Root"
+msgstr "Корневое меню Первой Модели"
+
+#. module: first_module
+#: model:ir.ui.menu,name:first_module.first_model_menu_submenu
+msgid "First Model Submenu"
+msgstr "Подменю Первой Модели"
+
+#. module: first_module
+#: model:ir.actions.act_window,name:first_module.first_model_act_window_action
+#: model:ir.ui.menu,name:first_module.first_model_menu
+msgid "First Model Window Action"
+msgstr "Действие Window Первой Модели"
+
+#. module: first_module
+#: model:ir.model.fields,field_description:first_module.field_first_model__id
+msgid "ID"
+msgstr "ID"
+
+#. module: first_module
+#: model:ir.model.fields,field_description:first_module.field_first_model____last_update
+msgid "Last Modified on"
+msgstr "Последняя модификация"
+
+#. module: first_module
+#: model:ir.model.fields,field_description:first_module.field_first_model__write_uid
+msgid "Last Updated by"
+msgstr "Автор последней модификации"
+
+#. module: first_module
+#: model:ir.model.fields,field_description:first_module.field_first_model__write_date
+msgid "Last Updated on"
+msgstr "Последние обновление"
+
+#. module: first_module
+#: model_terms:ir.ui.view,arch_db:first_module.first_model_search_view
+msgid "My records"
+msgstr "Мои записи"
+
+#. module: first_module
+#: model:ir.model.fields,field_description:first_module.field_first_model__name
+msgid "Name"
+msgstr "Имя"
+
+#. module: first_module
+#: model:ir.model.fields,help:first_module.field_first_model__name
+msgid "Name of record"
+msgstr "Имя записи"
+
+#. module: first_module
+#: model:ir.model.fields,field_description:first_module.field_first_model__result_field
+msgid "Result"
+msgstr "Результат"
+
+#. module: first_module
+#: model:ir.model.fields,help:first_module.field_first_model__result_field
+msgid "Result of multiplying Field one and Field two"
+msgstr "Результат умножения Поля Один и Поля Два"
+
+#. module: first_module
+#: model_terms:ir.ui.view,arch_db:first_module.first_model_search_view
+msgid "Search First Model Records"
+msgstr "Поиск по записям Первой Модели"
+
+#. module: first_module
+#: model_terms:ir.ui.view,arch_db:first_module.first_model_form_view
+msgid "Start Function"
+msgstr "Запуск Функции"
+
+#. module: first_module
+#: model:ir.model.fields,help:first_module.field_first_model__field_one
+msgid "Value of Field One"
+msgstr "Значение Поля Один"
+
+#. module: first_module
+#: model:ir.model.fields,help:first_module.field_first_model__field_two
+msgid "Value of Field Two"
+msgstr "Значение Поля Два"
+
+#. module: first_module
+#: model_terms:ir.actions.act_window,help:first_module.first_model_act_window_action
+msgid "Viola!!!"
+msgstr "Вуаля!!!"
+
+#. module: first_module
+#. odoo-python
+#: code:addons/first_module/models/first_model.py:0
+#, python-format
+msgid "You started function by button"
+msgstr "Вы запустили функцию по нажатию кнопки"
+
+#. module: first_module
+#: model:ir.model,name:first_module.model_first_model
+msgid "Your first model"
+msgstr "Ваша первая модель"
