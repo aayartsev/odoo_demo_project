@@ -5,6 +5,7 @@
         web_icon="first_module,static/description/icon.svg"
         active="True"
         sequence="100"
+        groups="first_module.first_module_group_user,first_module.first_module_group_auditor"
     >
         <menuitem
             id="first_model_menu_submenu"

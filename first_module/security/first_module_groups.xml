@@ -1,0 +1,36 @@
+<odoo>
+
+    <record id="module_category_first_module" model="ir.module.category">
+        <field name="name">First Module</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <record id="first_module_addtitional" model="ir.module.category">
+        <field name="name">First Module Additional</field>
+        <field name="sequence">15</field>
+    </record>
+
+    <record id="first_module_group_user" model="res.groups">
+        <field name="name">Employee</field>
+        <field name="category_id" ref="first_module.module_category_first_module"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="first_module_group_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="first_module.module_category_first_module"/>
+        <field name="implied_ids" eval="[(4, ref('first_module.first_module_group_user'))]"/>
+    </record>
+
+    <record id="first_module_group_admin" model="res.groups">
+        <field name="name">Administrator</field>
+        <field name="category_id" ref="first_module.module_category_first_module"/>
+        <field name="implied_ids" eval="[(4, ref('first_module.first_module_group_manager'))]"/>
+    </record>
+
+    <record id="first_module_group_auditor" model="res.groups">
+        <field name="name">Can write first.model records</field>
+        <field name="category_id" ref="base.module_category_usability"/>
+    </record>
+
+</odoo>

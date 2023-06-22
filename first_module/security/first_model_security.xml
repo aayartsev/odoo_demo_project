@@ -1,0 +1,57 @@
+<odoo>
+
+    <record id="first_module_global_access_read_and_create" model="ir.rule">
+        <field name="name">Records: field one is uqual 20</field>
+        <field name="model_id" ref="model_first_model"/>
+        <field name="domain_force">[("field_one", "in", [20])]</field>
+        <field name="perm_read" eval="False"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <record id="first_module_group_user_access_read_and_create" model="ir.rule">
+        <field name="name">Records: field one is not uqual 30, 25, 40</field>
+        <field name="model_id" ref="model_first_model"/>
+        <field name="domain_force">[("field_one", "not in", [30, 25, 40])]</field>
+        <field name="groups" eval="[(4, ref('first_module.first_module_group_user'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <record id="first_module_group_manager_access_read_all" model="ir.rule">
+        <field name="name">Records: manager can read all records</field>
+        <field name="model_id" ref="model_first_model"/>
+        <field name="domain_force">[(1, "=", 1)]</field>
+        <field name="groups" eval="[(4, ref('first_module.first_module_group_manager'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <record id="first_module_group_admin_access_all" model="ir.rule">
+        <field name="name">Records: admin can do all actions with all records</field>
+        <field name="model_id" ref="model_first_model"/>
+        <field name="domain_force">[(1, "=", 1)]</field>
+        <field name="groups" eval="[(4, ref('first_module.first_module_group_admin'))]"/>
+        <field name="perm_read" eval="False"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
+
+     <record id="first_module_group_auditor_access_all" model="ir.rule">
+        <field name="name">Records: auditor rules</field>
+        <field name="model_id" ref="model_first_model"/>
+        <field name="domain_force">[(1, "=", 1)]</field>
+        <field name="groups" eval="[(4, ref('first_module.first_module_group_auditor'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+</odoo>

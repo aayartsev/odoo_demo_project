@@ -10,7 +10,9 @@
         'web',
     ],
     'data': [
+        'security/first_module_groups.xml',
         'security/ir.model.access.csv',
+        'security/first_model_security.xml',
         'views/first_model.xml',
         'views/menus.xml',
     ],
