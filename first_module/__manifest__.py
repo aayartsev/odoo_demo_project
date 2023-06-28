@@ -13,6 +13,7 @@
         'security/ir.model.access.csv',
         'views/first_model.xml',
         'views/menus.xml',
+        'views/print_form.xml',
     ],
     'demo': ['data/records_demo.xml', ],
     'license': 'LGPL-3',

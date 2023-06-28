@@ -1,0 +1,62 @@
+<odoo>
+        <template id="print_form_001_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="document">
+                <div class="article" t-att-data-oe-model="document and document._name" t-att-data-oe-id="document and document.id">
+                    <t t-call="first_module.print_form_001_body_template" />
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <template id="print_form_001_body_template">
+        <h1 t-esc="document.name"></h1>
+        <p>This is example of print form for record <span> </span><span t-esc="document.name"/></p>
+        <table  class="table table-main">
+            <tr>
+                <th class="text-center" t-esc="document._fields['field_one'].string"></th>  
+                <th class="text-center" t-esc="document._fields['field_two'].string"></th>
+                <th class="text-center" t-esc="document._fields['result_field'].string"></th>
+            </tr>
+            <tr>
+                <td class="text-center" t-esc="document.field_one" ></td>
+                <td class="text-center" t-esc="document.field_two" ></td>
+                <td class="text-center" t-esc="document.result_field" ></td>
+            </tr>
+        </table>
+
+        <p t-esc="docs"/>
+
+        <p t-esc="data"/>
+    </template>
+    
+    <record id="first_model_print_form_001" model="ir.actions.report">
+        <field name="name">Print Form Name 001</field>
+        <field name="model">first.model</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">first_module.print_form_001_template</field>
+        <field name="report_file">first_module.print_form_001_template</field>
+        <field name="print_report_name">'Document №%s - %s' % (object.id, object.create_date)</field>
+        <field name="binding_model_id" ref="first_module.model_first_model"></field>
+    </record>
+
+    <record id="paperformat_a4_belarus_tn_portrait" model="report.paperformat">
+        <field name="name">ТН Вертикальная Беларусь</field>
+        <field name="default" eval="True"/>
+        <field name="format">custom</field>
+        <field name="page_height">288</field>
+        <field name="page_width">204</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">4</field>
+        <field name="margin_bottom">12</field>
+        <field name="margin_left">11</field>
+        <field name="margin_right">2</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">0</field>
+        <field name="dpi">90</field>
+        <field name="report_ids" eval="[(4, ref('first_module.first_model_print_form_001'))]"/>
+    </record>
+
+
+
+</odoo>

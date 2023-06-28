@@ -31,3 +31,23 @@ class FirstModel(models.Model):
 
     def start_function(self):
         _logger.warning(_('You started function by button'))
+
+class ParticularReport(models.AbstractModel):
+    _name = "report.first_module.print_form_001_template"
+    _description = "Extend of print form"
+
+    @api.model
+    def _get_report_values(self, docids, data=None):
+        """
+        Функция для расширения данных подаваемых на печать в шаблон
+        param : docids : list : список id записей модели, к которой прикреплен шаблон для печати
+        param : data : {} : дополнительные которые содержат в себе метаинформацию
+        return : dict : словарь данными, используемыми в шаблоне
+        """
+        first_model_recordset = self.env["first.model"].browse(docids)
+        ...
+        return {
+            "doc_ids": docids,
+            "docs": first_model_recordset,
+            "data": data,
+        }
