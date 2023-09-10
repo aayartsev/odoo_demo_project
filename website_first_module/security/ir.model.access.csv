@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_first_model_base_group_public,first_model base_group_public,first_module.model_first_model,base.group_public,1,0,0,0

@@ -1,0 +1,11 @@
+<odoo>
+    <record id="first_module.record_001_first_model" model="first.model">
+        <field name="is_published" eval="True"/>
+    </record>
+    <record id="first_module.record_002_first_model" model="first.model">
+        <field name="is_published" eval="True"/>
+    </record>
+    <record id="first_module.record_003_first_model" model="first.model">
+        <field name="is_published" eval="False"/>
+    </record>
+</odoo>

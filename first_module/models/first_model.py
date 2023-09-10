@@ -9,7 +9,11 @@ class FirstModel(models.Model):
     _name = 'first.model'
     _description = 'Your first model'
 
-    name = fields.Char(string='Name', help='Name of record')
+    name = fields.Char(
+        string='Name',
+        help='Name of record',
+        translate=True
+    )
 
     field_one = fields.Integer(string='Field One', help='Value of Field One')
 
