@@ -1,0 +1,1 @@
+console.log("First model page js work")

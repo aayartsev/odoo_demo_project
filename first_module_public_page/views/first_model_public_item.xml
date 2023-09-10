@@ -1,0 +1,10 @@
+<odoo>
+    <template id="first_model_public_item">
+        <t t-call="first_module_public_page.base_layout">
+            <div>
+                <h1 t-out="record.name"> </h1>
+                <a href="/records/">Назад к списку записей</a>
+            </div>
+        </t>
+    </template>
+</odoo>

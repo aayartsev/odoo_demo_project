@@ -1,0 +1,14 @@
+<odoo>
+    <template id="first_model_public_list">
+        <t t-call="first_module_public_page.base_layout">
+            <div>
+                <h1>Записи модели "First Model"</h1>
+                <ul>
+                    <li t-foreach="all_records" t-as="record">
+                        <a t-attf-href="/records/#{record.id}" t-out="record.name"/>
+                    </li>
+                </ul>
+            </div>
+        </t>
+    </template>
+</odoo>
