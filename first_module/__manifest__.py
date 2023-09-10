@@ -1,6 +1,6 @@
 {
     'name': 'First Module',
-    'version': '16.0.1.0.0',
+    'version': '16.0.1.0.1',
     'category': 'Learning',
     'summary': 'Module for learning',
     'website': 'https://blog.yartsev.by',

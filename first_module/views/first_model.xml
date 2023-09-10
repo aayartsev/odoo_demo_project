@@ -5,7 +5,7 @@
         <field name="arch" type="xml">
             <tree string="First Model Records">
                 <field name="name" />
-                <field name="field_one" />
+                <field name="field_three" />
                 <field name="field_two" />
                 <field name="result_field" />
             </tree>
@@ -29,7 +29,7 @@
                 <sheet>
                     <group name="first_model_data">
                         <field name="name" />
-                        <field name="field_one" />
+                        <field name="field_three" />
                         <field name="field_two" />
                         <field name="result_field" />
                     </group>
