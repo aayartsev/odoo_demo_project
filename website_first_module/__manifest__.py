@@ -18,7 +18,7 @@
     'demo': ['data/records_demo.xml', ],
     'assets': {
         'web.assets_frontend': [
-            'website_first_module/static/src/js/toggle_visible_record.js',
+            'website_first_module/static/src/js/user_custom_toggle_visible_record.js',
         ],
     },
     'installable': True, # ???
