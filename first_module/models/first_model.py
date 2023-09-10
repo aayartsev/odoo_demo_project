@@ -30,7 +30,7 @@ class FirstModel(models.Model):
     )
 
 
-    @api.depends('field_one', 'field_two')
+    @api.depends('field_three', 'field_two')
     def _compute_result_field(self):
         for record in self:
             record.result_field = record.field_three * record.field_two
