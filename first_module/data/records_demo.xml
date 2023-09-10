@@ -1,14 +1,17 @@
 <odoo>
     <record id="record_001_first_model" model="first.model">
         <field name="name">record 001</field>
+        <!-- <field name="field_one">10</field> -->
         <field name="field_two">0.1</field>
     </record>
     <record id="record_002_first_model" model="first.model">
         <field name="name">record 002</field>
+        <!-- <field name="field_one">20</field> -->
         <field name="field_two">0.2</field>
     </record>
     <record id="record_003_first_model" model="first.model">
         <field name="name">record 003</field>
+        <!-- <field name="field_one">30</field> -->
         <field name="field_two">0.3</field>
     </record>
 </odoo>

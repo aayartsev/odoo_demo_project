@@ -11,7 +11,10 @@ class FirstModel(models.Model):
 
     name = fields.Char(string='Name', help='Name of record')
 
-    # field_one = fields.Integer(string='Field One', help='Value of Field One')
+    # field_one = fields.Integer(
+    # string='Field One', 
+    # help='Value of Field One'
+    # )
 
     field_two = fields.Float(
         string='Field Two',
