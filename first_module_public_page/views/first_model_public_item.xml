@@ -1,6 +1,7 @@
 <odoo>
     <template id="first_model_public_item">
         <t t-call="first_module_public_page.base_layout">
+            <t t-set="meta_title" t-value="'Запись: %s' % (record.name)"/>
             <div>
                 <h1 t-out="record.name"> </h1>
                 <a href="/records/">Назад к списку записей</a>

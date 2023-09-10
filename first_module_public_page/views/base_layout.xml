@@ -4,7 +4,7 @@
         <head>
             <meta charset="UTF-8"/>
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            <title>Document</title>
+            <title t-out="meta_title or 'Document'"/>
 
             <t t-call-assets="first_module_public_page.assets_first_module" t-js="false"/>
             <t t-call-assets="first_module_public_page.assets_first_module" t-css="false"/>
