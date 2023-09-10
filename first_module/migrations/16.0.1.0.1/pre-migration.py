@@ -1,4 +1,11 @@
+import logging
+
+_logger = logging.getLogger(__name__)
+
 def migrate(cr, version):
+    
+    _logger.warning(('-== Migration started ==-'))
+
     """   Update first_model table   """
     query = """
     DO $$
