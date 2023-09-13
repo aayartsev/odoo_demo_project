@@ -2,10 +2,6 @@ from odoo import http
 from odoo.http import request
 from odoo.osv import expression
 
-import werkzeug
-
-
-
 class WebsiteFirstModelDataController(http.Controller):
 
     @http.route(["/records"], type="http", auth="public",  website=True, sitemap=True)
@@ -15,7 +11,6 @@ class WebsiteFirstModelDataController(http.Controller):
             domain = expression.AND([domain, [("is_published", "=", True)]])
         all_records = request.env["first.model"].search(domain)
         values = {
-            
             "all_records": all_records,
         }
         # наличие в декораторе параметра website=True автоматически добавит при рендеринге шаблона 

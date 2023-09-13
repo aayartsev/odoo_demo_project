@@ -1,4 +1,11 @@
 <odoo>
+    <template id="toggle_publish_button">
+        <button class="btn toggle-published" t-if="request.env.user.has_group('base.group_user')" t-att-data-model="record._name" t-att-data-res-id="record.id" t-att-data-is-published="record.is_published">
+            <i t-if="not record.is_published" class="fa fa-eye-slash text-danger" aria-hidden="true"></i>
+            <i t-if="record.is_published" class="fa fa-eye text-success" aria-hidden="true"></i>
+        </button>
+    </template>
+
     <template id="first_model_public_list" name="First Model records">
         <t t-call="website.layout">
             <div class="container">
@@ -7,12 +14,8 @@
                     <div class="col-12">
                         <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between align-items-center" t-foreach="all_records" t-as="record">
-                                
                                 <a t-att-class="'text-muted' if not record.is_published else ''" t-att-href="record.website_url" t-out="record.name"/>
-                                <button class="btn toggle-published" t-if="request.env.user.has_group('base.group_user')" t-att-data-model="record._name" t-att-data-res-id="record.id" t-att-data-is-published="record.is_published">
-                                    <i t-if="not record.is_published" class="fa fa-eye-slash text-danger" aria-hidden="true"></i>
-                                    <i t-if="record.is_published" class="fa fa-eye text-success" aria-hidden="true"></i>
-                                </button>
+                                <t t-call="website_first_module.toggle_publish_button"></t>
                             </li>
                         </ul>
                     </div>

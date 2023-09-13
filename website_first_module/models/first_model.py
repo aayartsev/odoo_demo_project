@@ -1,6 +1,6 @@
 from odoo import models, api
 
-from odoo.addons.http_routing.models.ir_http import slug, unslug
+from odoo.addons.http_routing.models.ir_http import slug
 
 
 class FirstModel(models.Model):
