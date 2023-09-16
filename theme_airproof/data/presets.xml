@@ -1,0 +1,32 @@
+<odoo>
+   <record id="website.template_header_default" model="ir.ui.view">
+      <field name="active" eval="False"/>
+   </record>
+
+   <template id="theme_airproof.template_header_opt" inherit_id="website.snippet_options" name="Header Template - Option">
+      <xpath expr="//we-select[@data-variable='header-template']" position="inside">
+         <we-button title="Boxed Edit"
+            data-name="header_boxed_edit_opt"
+            data-customize-website-views="theme_airproof.template_header_boxed_edit"
+            data-customize-website-variable="'airproof'"
+            data-img="/theme_airproof/static/src/img/wbuilder/header_template_boxed.svg"/>
+      </xpath>
+   </template>
+
+   <record id="theme_airproof.template_header_boxed_edit" model="theme.ir.ui.view">
+      <field name="active" eval="True"/>
+   </record>
+
+   <template id="theme_airproof.template_footer_opt" inherit_id="website.snippet_options" name="Footer Template - Option">
+      <xpath expr="//we-select[@data-variable='footer-template']" position="inside">
+         <we-button title="airproof"
+            data-customize-website-views="theme_airproof.template_footer_contact_edit"
+            data-customize-website-variable="'airproof'"
+            data-img="/theme_airproof/static/src/img/wbuilder/footer_template_contact.svg"/>
+      </xpath>
+   </template>
+   <record id="theme_airproof.template_footer_contact_edit" model="theme.ir.ui.view">
+      <field name="active" eval="True"/>
+   </record>
+     
+</odoo>

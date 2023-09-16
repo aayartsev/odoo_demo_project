@@ -1,0 +1,7 @@
+<odoo>
+    <template id="drop_zone_before_footer" inherit_id="website.layout" name="Drop Zone Before Footer">
+        <xpath expr="//footer[@id='bottom']" position="before">
+            <div id="oe_structure_layout_01" class="oe_structure"/>
+        </xpath>
+    </template>
+</odoo>

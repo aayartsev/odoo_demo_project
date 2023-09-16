@@ -28,7 +28,7 @@ $o-color-palettes: map-merge($o-color-palettes,
 
         //  'o-cc*-bg':                     'o-color-*',
         //  'o-cc*-text':                   'o-color-*',
-        //  'o-cc*-headings':               'o-color-*',
+        // 'o-cc2-headings':                'o-color-2',
         //  'o-cc*-h2':                     'o-color-*',
         //  'o-cc*-h3':                     'o-color-*',
         //  'o-cc*-h4':                     'o-color-*',
@@ -48,12 +48,22 @@ $o-selected-color-palettes-names: append($o-selected-color-palettes-names, 'airp
 
 $o-website-values-palettes: (
    (
-        'font':                           'Nunito',
-        'headings-font':                  'Nunito',
-        'navbar-font':                    'AlumniSansPinstripe',
-        'buttons-font':                   'Nunito',
+      // Colors
+      'color-palettes-name':            'airproof',
+
+      // Fonts
+      'font':                           'Nunito',
+      'headings-font':                  'Nunito',
+      'navbar-font':                    'AlumniSansPinstripe',
+      'buttons-font':                   'Nunito',
+      // Layout
+      'body-image': '/theme_airproof/static/src/img/flowing-lines-grey-freesvg.svg',
+      'body-image-type': 'image',
+      // Templates
+      'header-template': 'airproof',
+      'footer-template': 'airproof',
+      // Buttons
+      // ...
    ),
-   (
-        'color-palettes-name':              'airproof',
-    ),
 );
+

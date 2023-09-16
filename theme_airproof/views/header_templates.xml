@@ -1,0 +1,83 @@
+<odoo>
+    
+    <record id="template_header_boxed_edit" model="theme.ir.ui.view">
+        <field name="name">Airproof Header</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_airproof.template_header_boxed_edit</field>
+        <field name="inherit_id" ref="website.layout"/>
+        <field name="mode">extension</field>
+        <field name="active">False</field>
+        <field name="arch" type="xml">
+            <xpath expr="//header//nav" position="replace">
+                <div class="o_header_boxed_background o_colored_level o_cc pt8 pb8">
+                    <div class="container d-flex align-items-center pb-4 flex-wrap">
+                        <!-- Social Icons -->
+                        <div class="oe_structure oe_structure_solo" id="oe_structure_header_boxed_1">
+                            <section class="s_text_block" data-snippet="s_text_block" name="Text">
+                                <div class="container">
+                                    <div class="s_social_media text-start o_not_editable" data-snippet="s_social_media" data-name="Social Media" contenteditable="false">
+                                        <h6 class="s_social_media_title d-none" contenteditable="true">Follow us</h6>
+                                        <a href="https://t.me/open_odoo" class="s_social_media_telegram" target="_blank">
+                                            <i class="fa fa-telegram m-1 o_editable_media"/>
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <ul class="nav ms-auto flex-nowrap" contenteditable="false">
+                            <!-- Sign In -->
+                            <t t-call="portal.placeholder_user_sign_in">
+                                <t t-set="_item_class" t-valuef="nav-item ms-lg-3"/>
+                                <t t-set="_link_class" t-valuef="nav-link fw-bold"/>
+                            </t>
+                            <!-- User Dropdown -->
+                            <t t-call="portal.user_dropdown">
+                                <t t-set="_avatar" t-value="true"/>
+                                <t t-set="_item_class" t-valuef="nav-item dropdown ms-lg-3"/>
+                                <t t-set="_link_class" t-valuef="nav-link"/>
+                                <t t-set="_dropdown_menu_class" t-valuef="dropdown-menu-end"/>
+                            </t>
+                        </ul>
+                        <!-- Language Selector -->
+                        <!-- Не появляется, потому как исходный шаблон пустой -->
+                        <t t-call="website.placeholder_header_language_selector">
+                            <t t-set="_div_classes" t-valuef="ms-2 d-none d-sm-block"/>
+                        </t>
+                    </div>
+                </div>
+                <div id="top_menu_container" class="container mt-n4">
+                    <t t-call="website.navbar">
+                        <t t-set="_navbar_classes" t-valuef="shadow-sm rounded pe-2"/>
+                        <!-- Brand -->
+                        <t t-call="website.placeholder_header_brand">
+                            <t t-set="_link_class" t-valuef="airproof-logo"/>
+                         </t>
+                        <!-- Navbar Toggler -->
+                        <t t-call="website.navbar_toggler"/>
+                        <!-- Navbar Collapse -->
+                        <div id="top_menu_collapse" class="collapse navbar-collapse">
+                            <t t-call="website.navbar_nav">
+                                <t t-set="_nav_class" t-valuef="mx-auto"/>
+                                <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                    <t t-call="website.submenu">
+                                        <t t-set="item_class" t-valuef="nav-item"/>
+                                        <t t-set="link_class" t-valuef="nav-link"/>
+                                    </t>
+                                </t>
+                            </t>
+                            <!-- Language Selector -->
+                            <t t-call="website.placeholder_header_language_selector">
+                                <t t-set="_div_classes" t-valuef="d-block d-sm-none mb-2"/>
+                                <t t-set="_dropdown_menu_class" t-valuef="dropdown-menu-end position-static float-none"/>
+                            </t>
+                            <!-- Call To Action -->
+                            <t t-call="website.placeholder_header_call_to_action">
+                                <t t-set="_div_classes" t-valuef="ms-lg-3"/>
+                            </t>
+                        </div>
+                    </t>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

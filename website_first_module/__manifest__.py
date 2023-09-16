@@ -13,6 +13,7 @@
         'security/ir.model.access.csv',
         'data/website_menu_data.xml',
         'views/first_model_templates.xml',
+        'views/theme_selection_menu.xml',
 
     ],
     'demo': ['data/records_demo.xml', ],

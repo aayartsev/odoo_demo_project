@@ -1,0 +1,11 @@
+<odoo>
+    
+    <menuitem
+        name="Themes List"
+        id="themes_list"
+        action="website.theme_install_kanban_action"
+        groups="base.group_user"
+        sequence="10"
+        parent="website.menu_website_global_configuration"
+    />
+</odoo>

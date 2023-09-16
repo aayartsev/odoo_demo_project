@@ -1,0 +1,5 @@
+<odoo>
+    <record id="website.default_website" model="website">
+        <field name="logo" type="base64" file="theme_airproof/static/src/img/open_odoo_logo.svg"/>
+     </record>
+</odoo>
