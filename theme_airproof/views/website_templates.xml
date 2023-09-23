@@ -4,4 +4,20 @@
             <div id="oe_structure_layout_01" class="oe_structure"/>
         </xpath>
     </template>
+
+    <record id="s_mega_menu_airproof" model="ir.ui.view">
+        <field name="name">Airproof</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_airproof.s_mega_menu_airproof</field>
+        <field name="groups_id" eval="[(4, ref('base.group_user'))]"/> 
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <section class="s_mega_menu_airproof o_cc o_cc1 pt40">
+                <div class="row">
+                    <div class="col-md-4">123</div>
+                    <div class="col-md-8">456</div>
+                </div>
+            </section>
+        </field>
+    </record>
 </odoo>

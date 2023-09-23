@@ -1,0 +1,57 @@
+<odoo>
+    <!-- Удаляем меню -->
+    <delete model="website.menu" search="[('url','in', ['/contactus']),('website_id', '=', 1)]"/>
+    <!-- Добавляем меню -->
+    <record id="menu_about_us" model="website.menu">
+        <field name="name">About us</field>
+        <field name="url">/about-us</field>
+        <field name="website_id">1</field>
+        <!-- /default-main-menu - является корневым меню для меню сайта -->
+        <field name="parent_id" search="[
+            ('url', '=', '/default-main-menu'),
+            ('website_id', '=', 1)]"/>
+        <field name="sequence" type="int">10</field>
+    </record>
+    <record id="menu_somthing_else" model="website.menu">
+        <field name="name">Еще</field>
+        <field name="website_id">1</field>
+        <field name="parent_id" search="[
+            ('url', '=', '/default-main-menu'),
+            ('website_id', '=', 1)]"/>
+        <field name="sequence" type="int">12</field>
+    </record>
+
+    <!-- внешняя ссылка -->
+    <record id="external_link_exmple" model="website.menu">
+        <field name="url">https://blog.yartsev.by/</field>
+        <field name="name">Блог Ярцева</field>
+        <field name="new_window" eval="True"/>
+        <field name="website_id">1</field>
+        <field name="parent_id" ref="theme_airproof.menu_somthing_else"/>
+    </record>
+
+    <record id="menu_services_item_1" model="website.menu">
+        <field name="name">Item 1</field>
+        <field name="url">/dropdown/item-1</field>
+        <field name="website_id">1</field>
+        <field name="parent_id" ref="theme_airproof.menu_somthing_else"/>
+        <field name="sequence" type="int">10</field>
+    </record>
+    <!-- Мега меню -->
+    <record id="menu_mega_menu" model="website.menu">
+        <field name="name">Mega Menu</field>
+        <field name="url">/mega-menu</field>
+        <field name="parent_id" search="[
+            ('url', '=', '/default-main-menu'),
+            ('website_id', '=', 1),
+        ]"/>
+        <field name="website_id">1</field>
+        <field name="sequence" type="int">20</field>
+        <field name="is_mega_menu" eval="True"/>
+        <field name="mega_menu_classes">airproof-mega-menu</field>
+        <field name="mega_menu_content" type="html">
+            <section class="s_mega_menu o_cc o_cc1 pt40">
+            </section>
+        </field>
+    </record>
+</odoo>

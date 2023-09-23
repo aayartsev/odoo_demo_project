@@ -28,5 +28,14 @@
    <record id="theme_airproof.template_footer_contact_edit" model="theme.ir.ui.view">
       <field name="active" eval="True"/>
    </record>
-     
+
+   <template id="theme_airproof.mega_menu_options" inherit_id="website.snippet_options" name="Airproof - Mega Menu Options">
+      <xpath expr="//we-select[@data-name='mega_menu_template_opt']" position="inside">
+          <t t-set="_label">Airproof</t>
+          <we-button t-att-data-select-label="_label"
+              data-select-template="theme_airproof.s_mega_menu_airproof"
+              data-img="/website/static/src/img/snippets_thumbs/s_mega_menu_multi_menus.svg"
+              t-out="_label"/>
+      </xpath>
+  </template>
 </odoo>

@@ -13,6 +13,7 @@
         'views/website_templates.xml',
         'data/images.xml',
         'data/presets.xml',
+        'data/menu.xml',
     ],
     'assets': {
         'web._assets_primary_variables': [
