@@ -1,0 +1,24 @@
+<odoo>
+    <record id="page_about_us" model="website.page">
+        <field name="name">About us</field>
+        <field name="is_published" eval="True"/>
+        <field name="key">theme_airproof.page_about_us</field>
+        <field name="url">/about-us</field>
+        <field name="type">qweb</field>
+        <field name="header_overlay" eval="True"/>
+        <field name="arch" type="xml">
+            <t t-name="theme_airproof.page_about_us">
+    
+                <t t-call="website.layout">
+                    <section style="background-image: url('/web/image/theme_airproof.img_about_01');"></section>
+                    <div id="wrap" class="oe_structure">
+    
+                        <h1>Airproof About Us</h1>
+                        
+                    </div>
+                </t>
+    
+            </t>
+        </field>
+    </record>
+</odoo>

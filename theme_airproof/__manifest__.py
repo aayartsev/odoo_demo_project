@@ -10,7 +10,11 @@
     'data': [
         'views/header_templates.xml',
         'views/footer_templates.xml',
+        'views/mega_menu_template.xml',
+        'views/home_page_template.xml',
         'views/website_templates.xml',
+        'views/404_temlpate.xml',
+        'views/about_us_page.xml',
         'data/images.xml',
         'data/presets.xml',
         'data/menu.xml',

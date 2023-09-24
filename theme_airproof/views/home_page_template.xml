@@ -1,0 +1,25 @@
+<odoo>
+    <!-- 
+        Если мы хотим, чтобы наша страница применялась только к нужном сайту в момент устновки темы
+        нам нужно создвать именно шаблон, либо запись в модели theme.ir.ui.view. 
+    
+    -->
+    <template id="homepage" name="Airproof Homepage" inherit_id="website.homepage">
+        <xpath expr="//t[@t-call='website.layout']" position="replace">
+            <t t-call="website.layout">
+    
+
+                <t t-set="additional_title" t-value="'Airproof Home'" />
+                <t t-set="meta_description" t-value="'Meta Descrition'"/>
+                <t t-set="pageName" t-value="'my-css-class'"/>
+                
+                <t t-set="no_header" t-value="true"/>
+                <t t-set="no_footer" t-value="true"/>
+                
+                <div id="wrap" class="oe_structure oe_empty">
+                    <h1>Airproof Homepage</h1>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>
