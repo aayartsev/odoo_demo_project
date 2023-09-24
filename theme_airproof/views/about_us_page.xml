@@ -8,16 +8,16 @@
         <field name="header_overlay" eval="True"/>
         <field name="arch" type="xml">
             <t t-name="theme_airproof.page_about_us">
-    
                 <t t-call="website.layout">
-                    <section style="background-image: url('/web/image/theme_airproof.img_about_01');"></section>
                     <div id="wrap" class="oe_structure">
-    
-                        <h1>Airproof About Us</h1>
-                        
+                        <section style="background-image: url('/web/image/theme_airproof.img_about_01'); min-height: 500px; padding-top:150px; background-position: center center;
+                        background-size: cover;">
+                            <div class="container">
+                                <h1 class="text-white">Airproof About Us</h1>
+                            </div>
+                        </section>
                     </div>
                 </t>
-    
             </t>
         </field>
     </record>
