@@ -1,0 +1,35 @@
+<odoo>
+    <template id="s_airproof">
+        <section class="s_airproof pt80 pb80" data-name="Airproof" data-snippet="airproof_snippet">
+            <!-- Content -->
+            <div class="container">
+                <table class="table table-airproof">
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Название</th>
+                            <th>Описание</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Asus 81</td>
+                            <td>Херня полная</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Asus 82</td>
+                            <td>Херня полная</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Asus 83</td>
+                            <td>Херня полная</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </template>
+</odoo>

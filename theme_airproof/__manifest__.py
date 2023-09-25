@@ -18,6 +18,8 @@
         'data/images.xml',
         'data/presets.xml',
         'data/menu.xml',
+        'views/snippets/s_airproof.xml',
+        'views/snippets/options.xml',
     ],
     'assets': {
         'web._assets_primary_variables': [

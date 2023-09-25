@@ -1,0 +1,39 @@
+<odoo>
+    <template id="snippets" inherit_id="website.snippets" name="Airproof Snippets">
+        <xpath expr="//*[@id='default_snippets']" position="before">
+            <t id="airproof_theme_snippets">
+                <div id="airproof_theme_snippets_category" class="o_panel">
+                    <div class="o_panel_header">Theme</div>
+                    <div class="o_panel_body">
+                        <t t-snippet="theme_airproof.s_airproof" t-thumbnail="/theme_airproof/static/src/snippets/s_airproof/s_product_list.svg">
+                            <keywords>Airproof Snippet</keywords>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="snippet_options" inherit_id="website.snippet_options" name="Airproof Snippet Options">
+        <xpath expr="." position="inside">
+    
+            <div data-selector="table">
+                <we-select string="Type of Table">
+                    <we-button data-select-class="">Default</we-button>
+                    <we-button data-select-class="table-bordered">Bordered</we-button>
+                    <we-button data-select-class="table-striped">Stiped</we-button>
+                </we-select>
+            </div>
+            <div data-selector="table, tbody">
+                <we-colorpicker string="Color of Borders"
+                        t-att-data-apply-to="apply_to"
+                        data-select-style="true"
+                        t-attf-data-css-property="border-color"
+                        data-color-prefix="border-"
+                        t-att-data-color="color_variable"/>
+            </div>
+    
+        </xpath>
+    </template>
+
+</odoo>
