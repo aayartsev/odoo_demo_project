@@ -32,8 +32,16 @@
                         data-color-prefix="border-"
                         t-att-data-color="color_variable"/>
             </div>
+            <div data-js="AirproofTable" data-selector=".s_airproof">
+                <we-select string="Подпись таблцы">
+                    <we-button data-select-class="s_blockquote_classic" data-start-table-func="without">Без подписи</we-button>
+                    <we-button data-select-class="s_blockquote_cover" data-start-table-func="bottom" data-name="blockquote_cover_opt">Снизу</we-button>
+                    <we-button data-select-class="s_blockquote_minimalist" data-start-table-func="top" data-name="blockquote_minimalist_opt">Сверху</we-button>
+                </we-select>
+            </div>
     
         </xpath>
+        
     </template>
 
 </odoo>

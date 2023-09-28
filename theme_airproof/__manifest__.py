@@ -34,5 +34,8 @@
             'theme_airproof/static/src/scss/header.scss',
             'theme_airproof/static/src/js/theme.js',
         ],
+        'website.assets_wysiwyg': [
+            'theme_airproof/static/src/snippets/s_airproof/options.js'
+        ],
     },
 }
