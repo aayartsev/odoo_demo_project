@@ -16,7 +16,7 @@
 
     <template id="snippet_options" inherit_id="website.snippet_options" name="Airproof Snippet Options">
         <xpath expr="." position="inside">
-    
+            <!-- data-selector - позволяет прицепить к определенному элементу пункт меню редактора и добавлять дополнительные классы(возможно атрибуты через конструкцию data-select-<custom-attribute>) -->
             <div data-selector="table">
                 <we-select string="Type of Table">
                     <we-button data-select-class="">Default</we-button>
@@ -32,13 +32,20 @@
                         data-color-prefix="border-"
                         t-att-data-color="color_variable"/>
             </div>
+            <!-- При выборе пункта меню, который закрплен за элементом в data-selector,  срабатывает метод по имени атрибута без слова data и переведенного в camelCase класса из атрибута data-js -->
+            <!-- Например при выборе пункта After у класса AirproofTable будет вызван метод startTableFunc -->
             <div data-js="AirproofTable" data-selector=".s_airproof">
-                <we-select string="Подпись таблцы">
-                    <we-button data-select-class="s_blockquote_classic" data-start-table-func="without">Без подписи</we-button>
-                    <we-button data-select-class="s_blockquote_cover" data-start-table-func="bottom" data-name="blockquote_cover_opt">Снизу</we-button>
-                    <we-button data-select-class="s_blockquote_minimalist" data-start-table-func="top" data-name="blockquote_minimalist_opt">Сверху</we-button>
+                <we-select string="Table description">
+                    <we-button data-select-class="s_table_without_descriptions" data-start-table-func="without">Without</we-button>
+                    <we-button data-select-class="s_table_descriptions_on_top" data-start-table-func="bottom" data-name="blockquote_cover_opt">After</we-button>
+                    <we-button data-select-class="s_table_descriptions_under_bottom" data-start-table-func="top" data-name="blockquote_minimalist_opt">Before</we-button>
                 </we-select>
             </div>
+            <!-- data-drop-in Пример -->
+            <!-- data-drop-in=":not(p).oe_structure:not(.oe_structure_solo), :not(.o_mega_menu):not(p)[data-oe-type=html], :not(p).oe_structure.oe_structure_solo:not(:has(> section, > div))"/> -->
+
+            <!-- data-drop-near Пример -->
+            <!-- data-drop-near=".row.o_grid_mode > div" -->
     
         </xpath>
         

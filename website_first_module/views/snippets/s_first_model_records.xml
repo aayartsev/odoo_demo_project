@@ -1,0 +1,18 @@
+<odoo>
+    <!-- Snippet -->
+    <template id="s_first_model_records" name="First Model Records">
+        <t t-call="website.s_dynamic_snippet_template">
+            <t t-set="snippet_name" t-value="'s_first_model_records'"/>
+            <t t-set="snippet_classes" t-value="'s_first_model_airproof'"/>
+        </t>
+    </template>
+
+    <template id="dynamic_filter_template_first_model_airproof" name="First Model Airproof">
+        <t t-foreach="records" t-as="data" data-number-of-elements="4" data-number-of-elements-sm="1" data-number-of-elements-fetch="8">
+            <t t-set="record" t-value="data['_record']"/>
+            <h3 t-out="record.name"></h3>
+            <!-- Content -->
+
+        </t>
+    </template>
+</odoo>

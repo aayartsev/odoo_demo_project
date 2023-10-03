@@ -12,6 +12,8 @@
     'data': [
         'security/ir.model.access.csv',
         'data/website_menu_data.xml',
+        'data/first_model_snippet_template_data.xml',
+        'views/snippets/s_first_model_records.xml',
         'views/first_model_templates.xml',
         'views/theme_selection_menu.xml',
 

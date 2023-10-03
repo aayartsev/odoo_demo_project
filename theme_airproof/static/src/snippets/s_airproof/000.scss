@@ -1,3 +1,10 @@
-.table-airproof tbody {
-    border: inherit,
+.s_airproof {
+    // Bottom
+    &.s_table_descriptions_under_bottom {
+        font-weight: bold;
+    }
+    // Top
+    &.s_table_descriptions_on_top {
+        font-weight: lighter;
+    }
 }

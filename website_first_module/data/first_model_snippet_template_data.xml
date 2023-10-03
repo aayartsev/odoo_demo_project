@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Filters for Dynamic Filter -->
+        <record id="dynamic_snippet_first_model_filter" model="ir.filters">
+            <field name="name">First Model</field>
+            <field name="model_id">first.model</field>
+            <field name="user_id" eval="False" />
+            <field name="domain">[('is_published', '=', True)]</field>
+            <field name="sort">['id desc']</field>
+            <field name="action_id" ref="website.action_website"/>
+        </record>
+        <!-- Dynamic Filter -->
+        <record id="dynamic_filter_first_model" model="website.snippet.filter">
+            <field name="name">First Model</field>
+            <field name="filter_id" ref="website_first_module.dynamic_snippet_first_model_filter"/>
+            <field name="field_names">name,field_one,field_two,result_field</field>
+            <field name="limit" eval="16"/>
+        </record>
+    </data>
+</odoo>
