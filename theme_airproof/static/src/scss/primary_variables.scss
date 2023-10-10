@@ -67,3 +67,12 @@ $o-website-values-palettes: (
    ),
 );
 
+
+   $o-bg-shapes: map-merge($o-bg-shapes,
+   (
+      'theme_airproof': ( // обязательно указать техническое имя модуля
+         'hexagons/01': ('position': bottom, 'size': 50px 100%, 'colors': (1, 2), 'repeat-x': true),
+      ),
+   )
+);
+

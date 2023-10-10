@@ -15,6 +15,7 @@
         'views/website_templates.xml',
         'views/404_temlpate.xml',
         'views/about_us_page.xml',
+        'views/shapes_pages.xml',
         'data/images.xml',
         'data/presets.xml',
         'data/menu.xml',

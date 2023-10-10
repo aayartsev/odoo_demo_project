@@ -18,7 +18,7 @@
         <field name="parent_id" search="[
             ('url', '=', '/default-main-menu'),
             ('website_id', '=', 1)]"/>
-        <field name="sequence" type="int">12</field>
+        <field name="sequence" type="int">150</field>
     </record>
 
     <!-- внешняя ссылка -->
@@ -53,5 +53,20 @@
             <section class="s_mega_menu o_cc o_cc1 pt40">
             </section>
         </field>
+    </record>
+    <!-- Страница с Shapes -->
+    <record id="menu_shapes_page" model="website.menu">
+        <field name="name">Shapes</field>
+        <field name="url">/shapes-page</field>
+        <field name="website_id">1</field>
+        <field name="parent_id" ref="theme_airproof.menu_somthing_else"/>
+        <field name="sequence" type="int">40</field>
+    </record>
+    <record id="menu_custom_shape_page" model="website.menu">
+        <field name="name">Custom Shape</field>
+        <field name="url">/custom-shape-page</field>
+        <field name="website_id">1</field>
+        <field name="parent_id" ref="theme_airproof.menu_somthing_else"/>
+        <field name="sequence" type="int">50</field>
     </record>
 </odoo>

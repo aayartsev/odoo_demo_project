@@ -1,0 +1,51 @@
+<odoo>
+    <record id="shapes_page" model="website.page">
+        <field name="name">Shapes</field>
+        <field name="is_published" eval="True"/>
+        <field name="key">theme_airproof.shapes_page</field>
+        <field name="url">/shapes-page</field>
+        <field name="type">qweb</field>
+        <field name="header_overlay" eval="False"/>
+        <field name="arch" type="xml">
+            <t t-name="theme_airproof.shapes_page">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure">
+                        <section data-oe-shape-data="{'shape':'web_editor/Zigs/06', 'flip':[x,y]}">
+                            <div class="o_we_shape o_we_flip_x o_we_flip_y o_web_editor_Zigs_06"/>
+                            <div class="container">
+                                <h1 class="text-white">Page with Shapes</h1>
+                             </div>
+                        </section>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+    <record id="custom_shape_page" model="website.page">
+        <field name="name">Shapes</field>
+        <field name="is_published" eval="True"/>
+        <field name="key">theme_airproof.custom_shape_page</field>
+        <field name="url">/custom-shape-page</field>
+        <field name="type">qweb</field>
+        <field name="header_overlay" eval="False"/>
+        <field name="arch" type="xml">
+            <t t-name="theme_airproof.custom_shape_page">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure">
+                        <!-- Для того, чтобы shape появился, нужно помимо использования атрибута data-oe-shape-data 
+                            в theme_airproof/static/src/scss/primary_variables.scss 
+                            расширить переменную $o-bg-shapes и указать класс o_<имя_модуля>_<имя_каталога_шейпов>_<имя_файла_svg_без_расширения>
+                        
+                        -->
+                        <section data-oe-shape-data="{'shape':'theme_airproof/hexagons/01' }">
+                            <div class="o_we_shape o_theme_airproof_hexagons_01"/>
+                            <div class="container">
+                                <h1 class="text-white">Page with Hexagon Shapes</h1>
+                             </div>
+                        </section>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+</odoo>

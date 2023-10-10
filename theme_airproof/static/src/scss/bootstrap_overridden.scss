@@ -11,3 +11,6 @@ $input-placeholder-color:      o-color('o-color-1') !default;
 
 // Cards
 $card-border-width:            0 !default;
+
+// Shapes
+$o-bg-shapes: change-shape-colors-mapping('web_editor', 'Zigs/06', (4: 3, 5: 1));

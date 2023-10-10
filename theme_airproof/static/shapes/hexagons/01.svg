@@ -1,0 +1,16 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="86" height="100">
+    <!-- Мы должны использовать цвета из дефолтной палитры, чтобы система могла их менять
+        default_palette = {
+            '1': '#3AADAA',
+            '2': '#7C6576',
+            '3': '#F6F6F6',
+            '4': '#FFFFFF',
+            '5': '#383E45',
+        }
+        см. web_editor/controllers/main.py функция _update_svg_colors
+
+        речь идет об этом использовании переменной в scss:
+         $o-bg-shapes: change-shape-colors-mapping('web_editor', 'Zigs/06', (4: 3, 5: 1));
+     -->
+    <polygon points="0 25, 43 0, 86 25, 86 75, 43 100, 0 75" style="fill: #3AADAA;"/>
+</svg>
