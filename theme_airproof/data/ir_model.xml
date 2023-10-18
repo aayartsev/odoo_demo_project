@@ -1,0 +1,13 @@
+<odoo>
+    <record id="first_module.model_first_model" model="ir.model">
+        <field name="website_form_key">create_frist_model_record</field>
+        <field name="website_form_access">True</field>
+        <field name="website_form_label">Create First Model Record</field>
+    </record>
+    <function model="ir.model.fields" name="formbuilder_whitelist">
+        <value>first.model</value>
+        <value eval="[
+            'name',
+        ]"/>
+    </function>
+</odoo>

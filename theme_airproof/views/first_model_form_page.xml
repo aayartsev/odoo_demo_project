@@ -1,0 +1,55 @@
+<odoo>
+    <record id="page_about_us" model="website.page">
+        <field name="name">First Model Form</field>
+        <field name="is_published" eval="True"/>
+        <field name="key">theme_airproof.page_first_model_form</field>
+        <field name="url">/first-model-form</field>
+        <field name="type">qweb</field>
+        <field name="header_overlay" eval="False"/>
+        <field name="arch" type="xml">
+            <t t-name="theme_airproof.page_first_model_form">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure">
+                        <div class="container s_allow_columns">
+                            <div class="row">
+                                <div class="col-lg-8 mt-4 mt-lg-0">
+                                    <p>
+                                        Contact us about anything related to our company or services.<br/>
+                                        We'll do our best to get back to you as soon as possible.
+                                    </p>
+                                    <section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+                                        <div class="container">
+                                            <form id="contactus_form" action="/website/form/" method="post" 
+                                            enctype="multipart/form-data" class="o_mark_required" data-mark="*" 
+                                            data-model_name="first.model" data-success-mode="redirect" 
+                                            data-success-page="/contactus-thank-you" data-pre-fill="true">
+                                                <div class="s_website_form_rows row s_col_no_bgcolor">
+                                                    <div class="mb-0 py-2 col-12 s_website_form_field s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
+                                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact1">
+                                                                <span class="s_website_form_label_content">Name</span>
+                                                                <span class="s_website_form_mark"> *</span>
+                                                            </label>
+                                                            <div class="col-sm">
+                                                                <input id="contact1" type="text" class="form-control s_website_form_input" name="name" required="" data-fill-with="name"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-0 py-2 col-12 s_website_form_submit" data-name="Submit Button">
+                                                        <div style="width: 200px;" class="s_website_form_label"/>
+                                                        <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send">Submit</a>
+                                                        <span id="s_website_form_result"></span>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+</odoo>

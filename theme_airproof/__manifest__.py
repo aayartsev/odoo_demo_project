@@ -19,6 +19,8 @@
         'data/images.xml',
         'data/presets.xml',
         'data/menu.xml',
+        'data/ir_model.xml',
+        'views/first_model_form_page.xml',
         'views/snippets/s_airproof.xml',
         'views/snippets/options.xml',
     ],
