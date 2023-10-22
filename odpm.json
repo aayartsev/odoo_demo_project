@@ -1,0 +1,9 @@
+{
+    "odoo_version": "16.0",
+    "dependencies":[
+    ],
+    "requirements_txt":[
+        "debugpy==1.6.3",
+        "python-slugify==8.0.1"
+    ]
+}
