@@ -1,6 +1,7 @@
 <odoo>
     <template id="toggle_publish_button">
-        <button class="btn toggle-published" t-if="request.env.user.has_group('base.group_user')" t-att-data-model="record._name" t-att-data-res-id="record.id" t-att-data-is-published="record.is_published">
+        <button class="btn toggle-published" t-if="request.env.user.has_group('base.group_user')" t-att-data-model="record._name" 
+            t-att-data-res-id="record.id" t-att-data-is-published="record.is_published">
             <i t-if="not record.is_published" class="fa fa-eye-slash text-danger" aria-hidden="true"></i>
             <i t-if="record.is_published" class="fa fa-eye text-success" aria-hidden="true"></i>
         </button>
