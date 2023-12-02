@@ -1,4 +1,6 @@
 {
+    "python_version": "3.7",
+    "debian_version": "11",
     "odoo_version": "16.0",
     "dependencies":[
     ],
