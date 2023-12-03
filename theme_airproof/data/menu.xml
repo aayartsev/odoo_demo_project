@@ -51,6 +51,7 @@
         <field name="mega_menu_classes">airproof-mega-menu</field>
         <field name="mega_menu_content" type="html">
             <section class="s_mega_menu o_cc o_cc1 pt40">
+                Mega Menu
             </section>
         </field>
     </record>
