@@ -1,5 +1,5 @@
 <odoo>
-    <record id="page_about_us" model="website.page">
+    <record id="first_model_form_webpage" model="website.page">
         <field name="name">First Model Form</field>
         <field name="is_published" eval="True"/>
         <field name="key">theme_airproof.page_first_model_form</field>
