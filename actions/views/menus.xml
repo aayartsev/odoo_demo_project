@@ -1,0 +1,9 @@
+<odoo>
+    <menuitem
+        id="actions_example_menu"
+        action="actions.server_action_example"
+        groups="base.group_user"
+        sequence="20"
+        parent="first_module.first_model_menu_submenu"
+    />
+</odoo>

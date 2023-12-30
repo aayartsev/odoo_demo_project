@@ -1,0 +1,11 @@
+<odoo>
+    <record id="first_module.record_001_first_model" model="first.model">
+        <field name="to_print" eval="True"></field>
+    </record>
+    <record id="first_module.record_002_first_model" model="first.model">
+        <field name="to_print">True</field>
+    </record>
+    <record id="first_module.record_003_first_model" model="first.model">
+        <field name="to_print">1</field>
+    </record>
+</odoo>

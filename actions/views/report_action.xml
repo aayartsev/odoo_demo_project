@@ -1,0 +1,10 @@
+<odoo>
+    <record id="report_action_example" model="ir.actions.report">
+        <field name="name">First Model Report</field>
+        <field name="model">first.model</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">actions.report_first_model</field>
+        <field name="report_file">actions.report_first_model</field>
+        <field name="binding_model_id" ref="model_first_model"/>
+    </record>
+</odoo>
