@@ -14,8 +14,7 @@
                             <div class="row">
                                 <div class="col-lg-8 mt-4 mt-lg-0">
                                     <p>
-                                        Contact us about anything related to our company or services.<br/>
-                                        We'll do our best to get back to you as soon as possible.
+                                        Enter data of new record
                                     </p>
                                     <section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
                                         <div class="container">
@@ -26,15 +25,38 @@
                                                 <div class="s_website_form_rows row s_col_no_bgcolor">
                                                     <div class="mb-0 py-2 col-12 s_website_form_field s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
                                                         <div class="row s_col_no_resize s_col_no_bgcolor">
-                                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact1">
-                                                                <span class="s_website_form_label_content">Name</span>
+                                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="record_name">
+                                                                <span class="s_website_form_label_content">Record name</span>
                                                                 <span class="s_website_form_mark"> *</span>
                                                             </label>
                                                             <div class="col-sm">
-                                                                <input id="contact1" type="text" class="form-control s_website_form_input" name="name" required="" data-fill-with="name"/>
+                                                                <input id="record_name" type="text" class="form-control s_website_form_input" name="name" required="1" data-fill-with="name"/>
                                                             </div>
                                                         </div>
                                                     </div>
+
+                                                    <div class="mb-0 py-2 col-12 s_website_form_field s_website_form_custom s_website_form_required" data-type="integer" data-name="Field">
+                                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="field_one">
+                                                                <span class="s_website_form_label_content">Field One</span>
+                                                                <span class="s_website_form_mark"> *</span>
+                                                            </label>
+                                                            <div class="col-sm">
+                                                                <input id="field_one" type="number" class="form-control s_website_form_input" name="field_one" required="1" data-fill-with="field_one"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-0 py-2 col-12 s_website_form_field s_website_form_custom s_website_form_required" data-type="float" data-name="Field">
+                                                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="field_two">
+                                                                <span class="s_website_form_label_content">Field Two</span>
+                                                            </label>
+                                                            <div class="col-sm">
+                                                                <input id="field_two" type="number" step="0.01" class="form-control s_website_form_input" name="field_two" required="1" data-fill-with="field_two"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
                                                     <div class="mb-0 py-2 col-12 s_website_form_submit" data-name="Submit Button">
                                                         <div style="width: 200px;" class="s_website_form_label"/>
                                                         <a href="#" role="button" class="btn btn-primary btn-lg s_website_form_send">Submit</a>

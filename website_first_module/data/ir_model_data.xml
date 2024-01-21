@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="first_module.model_first_model" model="ir.model">
+            <!-- Used in FormBuilder Registry -->
+            <field name="website_form_key">create_first_model_record</field>
+            <!-- Specify the field which will contain meta and custom form fields datas. -->
+            <field name="website_form_default_field_id" ref="website_first_module.field_first_model__meta_data" />
+            <!-- Enable the form builder feature for this model. -->
+            <field name="website_form_access">True</field>
+            <!-- Form action label. Ex: crm.lead could be 'Send an e-mail' and project.issue could be 'Create an Issue'. -->
+            <field name="website_form_label">Create First Model Record</field>
+        </record>
+
+        <function model="ir.model.fields" name="formbuilder_whitelist">
+            <value>first.model</value>
+            <value eval="[
+                'name',
+                'field_one',
+            ]"/>
+        </function>
+    </data>
+</odoo>

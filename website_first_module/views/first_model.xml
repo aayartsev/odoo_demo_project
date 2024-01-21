@@ -1,0 +1,12 @@
+<odoo>
+    <record id="first_model_form_view" model="ir.ui.view">
+        <field name="name">first.model.form</field>
+        <field name="model">first.model</field>
+        <field name="inherit_id" ref="first_module.first_model_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='result_field']" position="after">
+                <field name="meta_data"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
