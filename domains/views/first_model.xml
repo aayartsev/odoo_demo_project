@@ -10,7 +10,8 @@
                 <field name="two_partner_id" />
                 <field name="three_partner_id" />
                 <field name="four_partner_id" domain="[('name', '!=', 'Deco Addict')]"/>
-                <field name="five_partner_id" domain="[('name', 'ilike', 'p')]" context="{'first_model_partner_domain': True}"/>
+                <field name="five_partner_id" domain="[('parent_id', 'child_of', four_partner_id)]"/>
+                <field name="six_partner_id" domain="[('name', 'ilike', 'p')]" context="{'first_model_partner_domain': True}"/>
             </xpath>
             <xpath expr="//button[@name='start_function']" position="after">
                 <button

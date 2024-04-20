@@ -38,7 +38,13 @@ class FirstModel(models.Model):
     five_partner_id = fields.Many2one(
         comodel_name="res.partner",
         string="Partner Domain 5",
-        help="Partner selection for domain example 5(res_partner.py)",
+        help="Partner selection for domain example 5(see form view)",
+    )
+
+    six_partner_id = fields.Many2one(
+        comodel_name="res.partner",
+        string="Partner Domain 6",
+        help="Partner selection for domain example 6(res_partner.py)",
     )
 
 
