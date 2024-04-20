@@ -1,0 +1,25 @@
+<odoo>
+
+    <record id="first_model_form_view" model="ir.ui.view">
+        <field name="name">first.model.form</field>
+        <field name="model">first.model</field>
+        <field name="inherit_id" ref="first_module.first_model_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='result_field']" position="after">
+                <field name="one_partner_id" />
+                <field name="two_partner_id" />
+                <field name="three_partner_id" />
+                <field name="four_partner_id" domain="[('name', '!=', 'Deco Addict')]"/>
+                <field name="five_partner_id" domain="[('name', 'ilike', 'p')]" context="{'first_model_partner_domain': True}"/>
+            </xpath>
+            <xpath expr="//button[@name='start_function']" position="after">
+                <button
+                    string="Set Partner Domain 1"
+                    name="set_one_partner_id"
+                    type="object"
+                    data-hotkey="shift+g"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>
