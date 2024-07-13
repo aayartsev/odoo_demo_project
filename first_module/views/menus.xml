@@ -2,7 +2,7 @@
     <menuitem
         id="first_model_menu_root"
         name="First Model Root"
-        web_icon="first_module,static/description/icon.svg"
+        web_icon="first_module,static/description/icon.png"
         active="True"
         sequence="100"
     >
