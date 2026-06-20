@@ -1,14 +1,14 @@
 <odoo>
-    <record id="first_model_tree_view" model="ir.ui.view">
-        <field name="name">first.model.tree</field>
+    <record id="first_model_list_view" model="ir.ui.view">
+        <field name="name">first.model.list</field>
         <field name="model">first.model</field>
         <field name="arch" type="xml">
-            <tree string="First Model Records">
+            <list string="First Model Records">
                 <field name="name" />
                 <field name="field_one" />
                 <field name="field_two" />
                 <field name="result_field" />
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -62,8 +62,8 @@
         <field name="name">First Model Window Action</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">first.model</field>
-        <field name="view_id" ref="first_module.first_model_tree_view" />
-        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="first_module.first_model_list_view" />
+        <field name="view_mode">list,form</field>
         <field name="search_view_id" ref="first_model_search_view" />
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
