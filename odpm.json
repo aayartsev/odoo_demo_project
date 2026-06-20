@@ -3,7 +3,7 @@
     "distro_version": "13",
     "distro_name": "debian",
     "postgres_version": "17",
-    "odoo_version": "18.0",
+    "odoo_version": "19.0",
     "dependencies": [],
     "requirements_txt": [
         ""
