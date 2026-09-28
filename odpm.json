@@ -1,15 +1,27 @@
 {
-    "python_version": "3.14",
-    "distro_version": "13",
-    "distro_name": "debian",
-    "postgres_version": "18",
-    "odoo_version": "20.0",
+    "manifest_schema": 2,
+    "requires_odpm": "4.7.0",
+    "platform": {
+        "git": "https://github.com/odoo/odoo.git",
+        "build_date": "latest"
+    },
+    "python": "3.14",
+    "distro": {
+        "name": "debian",
+        "version": "13"
+    },
+    "postgres": "18",
     "dependencies": [],
-    "requirements_txt": [
-        ""
+    "requirements": [
+        "markdown2"
     ],
-    "odoo_build_date": "latest",
-    "odoo_git_link": "https://github.com/odoo/odoo.git",
+    "odoo_version": "20.0",
     "platform_name": "odoo",
-    "odpm_version": "4.0"
+    "database": {
+        "language": "ru_RU",
+        "country": null
+    },
+    "developing": {
+        "git": "https://github.com/aayartsev/odoo_demo_project.git"
+    }
 }

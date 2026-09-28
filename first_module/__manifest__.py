@@ -10,7 +10,7 @@
         'web',
     ],
     'data': [
-        'security/ir.model.access.csv',
+        'security/ir.access.csv',
         'views/first_model.xml',
         'views/menus.xml',
     ],
