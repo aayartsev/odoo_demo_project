@@ -1,9 +1,9 @@
 {
-    "python_version": "3.12",
+    "python_version": "3.14",
     "distro_version": "13",
     "distro_name": "debian",
-    "postgres_version": "17",
-    "odoo_version": "19.0",
+    "postgres_version": "18",
+    "odoo_version": "20.0",
     "dependencies": [],
     "requirements_txt": [
         ""
